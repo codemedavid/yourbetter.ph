@@ -22,10 +22,11 @@ export default function AdminAssessments({ onNavigateToOrder }) {
         return stored || peptides;
     })();
 
+    const getName = (a) => a?.fullName || [a?.firstName, a?.lastName].filter(Boolean).join(' ') || '';
+
     const filtered = orders.filter(o =>
         o.aoNumber?.toLowerCase().includes(search.toLowerCase()) ||
-        o.assessmentAnswers?.firstName?.toLowerCase().includes(search.toLowerCase()) ||
-        o.assessmentAnswers?.lastName?.toLowerCase().includes(search.toLowerCase()) ||
+        getName(o.assessmentAnswers)?.toLowerCase().includes(search.toLowerCase()) ||
         o.assessmentAnswers?.email?.toLowerCase().includes(search.toLowerCase())
     );
 
@@ -95,7 +96,7 @@ export default function AdminAssessments({ onNavigateToOrder }) {
                         <div>
                             <h3 style={{ fontSize: '1.2rem', marginBottom: '4px' }}>{selected.aoNumber}</h3>
                             <p style={{ color: 'var(--gray-400)', fontSize: '0.85rem' }}>
-                                {selected.assessmentAnswers?.firstName} {selected.assessmentAnswers?.lastName} • {selected.assessmentAnswers?.email}
+                                {getName(selected.assessmentAnswers)} • {selected.assessmentAnswers?.email}
                             </p>
                         </div>
                         {statusBadge(selected.status)}
@@ -113,7 +114,7 @@ export default function AdminAssessments({ onNavigateToOrder }) {
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '0.85rem' }}>
                                 <div style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', borderRadius: 'var(--radius-sm)' }}>
                                     <span style={{ color: 'var(--gray-500)' }}>Name: </span>
-                                    <span>{selected.assessmentAnswers?.firstName} {selected.assessmentAnswers?.lastName}</span>
+                                    <span>{getName(selected.assessmentAnswers)}</span>
                                 </div>
                                 <div style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', borderRadius: 'var(--radius-sm)' }}>
                                     <span style={{ color: 'var(--gray-500)' }}>Email: </span>
@@ -137,13 +138,13 @@ export default function AdminAssessments({ onNavigateToOrder }) {
                             </h4>
                             {selected.assessmentAnswers ? (
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '6px', fontSize: '0.85rem' }}>
-                                    {Object.entries(selected.assessmentAnswers).filter(([k]) => !['firstName', 'lastName', 'email', 'age', 'sex'].includes(k)).map(([k, v]) => (
+                                    {Object.entries(selected.assessmentAnswers).filter(([k]) => !['fullName', 'firstName', 'lastName', 'email', 'age', 'sex'].includes(k)).map(([k, v]) => (
                                         <div key={k} style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', borderRadius: 'var(--radius-sm)' }}>
                                             <span style={{ color: 'var(--gray-500)', textTransform: 'capitalize' }}>{k.replace(/([A-Z])/g, ' $1')}: </span>
                                             <span style={{ color: 'var(--gray-300)' }}>{Array.isArray(v) ? v.join(', ') : String(v) || '—'}</span>
                                         </div>
                                     ))}
-                                    {Object.entries(selected.assessmentAnswers).filter(([k]) => !['firstName', 'lastName', 'email', 'age', 'sex'].includes(k)).length === 0 && (
+                                    {Object.entries(selected.assessmentAnswers).filter(([k]) => !['fullName', 'firstName', 'lastName', 'email', 'age', 'sex'].includes(k)).length === 0 && (
                                         <p style={{ color: 'var(--gray-500)' }}>No additional answers recorded</p>
                                     )}
                                 </div>
@@ -303,7 +304,7 @@ export default function AdminAssessments({ onNavigateToOrder }) {
                                         {statusBadge(o.status)}
                                     </div>
                                     <p style={{ color: 'var(--gray-500)', fontSize: '0.8rem' }}>
-                                        {o.assessmentAnswers?.firstName} {o.assessmentAnswers?.lastName} • {o.assessmentAnswers?.email}
+                                        {getName(o.assessmentAnswers)} • {o.assessmentAnswers?.email}
                                     </p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>

@@ -90,7 +90,7 @@ export default function ThankYou() {
                 <div className="animate-fadeInUp delay-5" style={{ marginBottom: '32px' }}>
                     <p style={{ color: 'var(--gray-500)', fontSize: '0.85rem', marginBottom: '12px' }}>Contact Admin via:</p>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-                        <a href="https://m.me/yourbetter.ph" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">
+                        <a href="https://m.me/betteryou.ph" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">
                             <MessageCircle size={16} /> Messenger
                         </a>
                         <a href="https://wa.me/639271234567" target="_blank" rel="noreferrer" className="btn btn-outline btn-sm">

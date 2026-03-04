@@ -8,7 +8,7 @@ import AdminPayments from './admin/AdminPayments';
 import AdminOrders from './admin/AdminOrders';
 import AdminProducts from './admin/AdminProducts';
 
-const ADMIN_PASSWORD = 'yourbetter2026';
+const ADMIN_PASSWORD = 'betteryou2026';
 
 const TABS = [
     { id: 'assessments', label: 'Manage Assessments', icon: ClipboardCheck, desc: 'View and manage all submitted assessments' },
@@ -83,7 +83,7 @@ export default function AdminDashboard() {
                 <aside className="admin-sidebar">
                     <div className="admin-sidebar-header">
                         <h3 style={{ fontSize: '1rem', color: 'var(--white)' }}>Admin Panel</h3>
-                        <p style={{ fontSize: '0.75rem', color: 'var(--gray-500)', marginTop: '2px' }}>YourBetter.PH</p>
+                        <p style={{ fontSize: '0.75rem', color: 'var(--gray-500)', marginTop: '2px' }}>BetterYOU.PH</p>
                     </div>
 
                     <nav className="admin-nav">

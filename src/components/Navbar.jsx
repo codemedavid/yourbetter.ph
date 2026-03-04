@@ -19,7 +19,7 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container">
                 <Link to="/" className="navbar-logo">
-                    Your<span className="logo-accent">Better</span>.PH
+                    Better<span className="logo-accent">YOU</span>.PH
                 </Link>
                 <button className="navbar-toggle" onClick={() => setOpen(!open)} aria-label="Menu">
                     {open ? <X size={24} /> : <Menu size={24} />}

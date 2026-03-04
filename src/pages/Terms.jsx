@@ -42,8 +42,8 @@ export default function Terms() {
 
                     <div style={{ color: 'var(--gray-400)', lineHeight: '1.8', fontSize: '0.95rem' }}>
                         <p style={{ marginBottom: '16px' }}>
-                            <strong style={{ color: 'var(--white)' }}>1. Program Overview</strong><br />
-                            YourBetter.PH is a medically supervised peptide therapy program. All recommendations are generated based
+                            <h3>1. Program Nature & Medical Disclaimer</h3>
+                            BetterYOU.PH is a medically supervised peptide therapy program. All recommendations are generated based
                             on your health assessment and must be reviewed and approved by a licensed physician before any purchase can be made.
                         </p>
                         <p style={{ marginBottom: '16px' }}>

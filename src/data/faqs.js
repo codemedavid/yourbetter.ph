@@ -1,7 +1,7 @@
 const faqs = [
     {
-        question: 'What is YourBetter.PH?',
-        answer: 'YourBetter.PH is a medically supervised peptide therapy program in the Philippines. We connect you with licensed physicians who evaluate your health profile and recommend personalized peptide protocols tailored to your goals.',
+        question: 'What is BetterYOU.PH?',
+        answer: 'BetterYOU.PH is a medically supervised peptide therapy program in the Philippines. We connect you with licensed physicians who evaluate your health profile and recommend personalized peptide protocols tailored to your goals.',
     },
     {
         question: 'Are peptides safe?',

@@ -131,7 +131,7 @@ export default function AdminPayments() {
                         <div className="form-group">
                             <label className="form-label">Account Name</label>
                             <input className="form-input" value={editing.accountName} onChange={e => setEditing(p => ({ ...p, accountName: e.target.value }))}
-                                placeholder="e.g., YourBetter PH Inc." />
+                                placeholder="e.g., BetterYOU.PH Inc." />
                         </div>
                         <div className="form-group">
                             <label className="form-label">Account Number</label>

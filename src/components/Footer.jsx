@@ -45,18 +45,18 @@ export default function Footer() {
                         <ul className="footer-links">
                             <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <Mail size={14} />
-                                <a href="mailto:hello@yourbetter.ph">hello@yourbetter.ph</a>
+                                <a href="mailto:hello@betteryou.ph">hello@betteryou.ph</a>
                             </li>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <Phone size={14} />
-                                <a href="tel:+639271234567">0927 123 4567</a>
+                                <a href="tel:+639000000000">+63 900 000 0000</a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© {new Date().getFullYear()} YourBetter.PH — All rights reserved. This is not medical advice. Always consult a licensed physician.</p>
+                    <p>© {new Date().getFullYear()} BetterYOU.PH — All rights reserved. This is not medical advice. Always consult a licensed physician.</p>
                 </div>
             </div>
         </footer>
